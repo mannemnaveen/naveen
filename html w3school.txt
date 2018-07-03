@@ -1,0 +1,475 @@
+<!doctype html>
+<html>
+<head>
+<title>page title</title>
+</head>
+<body>
+<h1>this is a heading</h1>
+<p>this is a paragraph</p>
+</body>
+</html>
+-----
+2.tooltip->about w3schools
+<!DOCTYPE html>
+<html>
+<body>
+<p title="About W3schools">w3schools is a webdevloper's site</p>
+</body>
+</html>
+-----
+3.change size of image 250*400
+<!DOCTYPE html>
+<html>
+<body>
+<img src="w3schools.jpg" width="250" height="400">
+</body>
+</html>
+----
+4.transform the text link that goes to https://w3schhols.com
+<!DOCTYPE html>
+<html>
+<body>
+this is link
+</body>
+</html>
+-----
+5.change destination to link below to "www.wwf.org.uk"
+<!doctype html>
+<html>
+<body>
+<a href="http://www.wwf.org.uk">this is a link</a>
+</body>
+</html>
+----
+6.img below does not exist.specify alternate text w3chools.com for image.
+<!DOCTYPE html>
+<html>
+<body>
+<img src="w3schools.jpg" alt="w3schools.com" width="135" height="50">
+</body>
+</html>
+------
+html headings:-
+=============
+1.Add a heading to the paragraph with the text "London".
+<!DOCTYPE html>
+<html>
+<body>
+<h1>London</h1>
+<p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+
+</body>
+</html>
+--------------
+2.heading-----
+---------------
+3.Add six headings to the document with the text "Hello".
+
+Start with the most important heading and end with the least important heading.???
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Hello</h1>
+<h2>Hello</h2>
+<h3>Hello</h3>
+<h4>Hello</h4>
+<h5>Hello</h5>
+<h6>Hello</h6>
+
+</body>
+</html>
+
+4.another example ->heading
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Universal Studios Presents</h1>
+
+<h2>Jurassic Park</h2>
+
+<h3>About</h3>
+
+<p>On the Island of Isla Nublar, a new park has been built: Jurassic Park is a theme park of cloned dinosaurs!!</p>
+
+</body>
+</html>
+---------------------
+html===paragraphs:-
+===================
+1.paragraph
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>This is a Heading
+
+<p>This is a paragraph.
+<p>This is a paragraph.
+<p>This is a paragraph.
+
+</body>
+</html>
+========
+html styles:-
+===========
+1.Change the text color of the paragraph to "blue".
+<!DOCTYPE html>
+<html>
+<body>
+
+<p style="color:red">This is a paragraph.</p>
+
+</body>
+</html>
+2.
+<p>This is a paragraph.</p>
+?3.
+<p style="text-align:center">This is a paragraph.</p>
+4.
+<p style="font-size:50px">This is a paragraph.</p>
+5.Change the background color of the page below to yellow.???
+<!DOCTYPE html>
+<html>
+<body style="background-color:yellow">
+
+<h1>This is a heading</h1>
+
+<p>This is a paragraph.</p>
+
+</body>
+</html>
+6.styles-Center align all content on the page.
+<!DOCTYPE html>
+<html>
+<body style="text-align:center">
+
+<h1>This is a heading</h1>
+
+<h2>This is also a heading</h2>
+
+<p>This is a paragraph.</p>
+
+<p>This is also paragraph.</p>
+
+</body>
+</html>
+================
+html formatting:-
+================
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>HTML is <mark>FUN</mark> to learn!</p>
+
+</body>
+</html>
+2.<p>H<sub>2</sub>O is the scientific term for water.</p>
+3.<p>My favorite color is <del>blue</del> red.</p>
+4.<p>Tokyo is the capital of Japan, the center of the Greater Tokyo Area, and the most populous <em>metropolitan</em> area in the world.</p>
+5.<p>WWF's mission is to stop the degradation of our planet's natural environment.</p>
+
+============
+html quotations
+===============
+1.Use an HTML element to add quotation marks around the letters "cool".
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>I am so <q>cool</q>.</p>
+
+</body>
+</html>
+ans:I am so "cool".
+
+
+2.<bdo dir="rtl">What a beautiful day!</bdo>
+ans:
+3.<p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+ans:The WHO was founded in 1948.
+==========
+4.html-css
+===========
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {background-color:yellow}
+h1   {color:blue}
+p    {color:black;broder:1px solid red}
+</style>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+
+<p>This is a paragraph.</p>
+
+</body>
+</html>
+-------------
+2.Add the "intro" class to all <p> elements.
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p.intro {
+    background-color:black;
+    color:white;
+    border:1px solid grey;
+    padding:10px;
+    margin:30px;
+    font-size:150%;
+}
+</style>
+</head>
+<body>
+
+<h1>This is a heading</h1>
+
+<p class="intro">This is a paragraph.</p>
+<p class="intro">This is a paragraph.</p>
+<p class="intro">This is a paragraph.</p>
+
+</body>
+</html>
+================
+HTML LINKS:-
+=============
+<!DOCTYPE html>
+<html>
+<body>
+<a href ="https://www.w3schools.com">visit our HTML tutorial</a>
+</body>
+</html>
+2.<a href="html_images.asp">HTML Images</a>
+3.<a href="html_images.asp" target="_blank">HTML Images</a>
+4.<a href="html_images.asp" target="_blank" style="text-decoration:none">HTML Images</a>
+5.Add a link to the image below (make it go "https://www.w3schools.com" if you click on it).???
+<!DOCTYPE html>
+<html>
+<body>
+<a href="https://www.w3schools.com">
+<img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;border:0">
+</a>
+</body>
+</html>
+
+===============
+HTML IMAGES:-
+=============
+<!DOCTYPE html>
+<html>
+<body>
+
+<img src="programming.gif" alt="Computer Man"
+width="96" height="96">
+
+</body>
+</html>
+2.<img src="html5.gif" alt="HTML5 Icon"
+style="width:256px;height:256px">
+3.<img src="img_the_scream.jpg" style="width:304px;height:228px;">
+4.
+<img src="w3schooooools.jpg" width="135" height="50">
+===========
+HTML TABLES:-
+===========
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table,th,td{
+broder:1px solid black;
+}
+th,td{
+padding:5px;
+text-align:left;
+}
+</style>
+</head>
+<body>
+<table style="width:100%">
+<tr>
+<th>first name</th>
+<th>last name</th>
+<th>points</th>
+</tr>
+<tr>
+<td>jill</td>
+<td>smith</td>
+<td>50</td>
+</tr>
+<tr>
+<td>eve</td>
+<td>jackson</td>
+<td>94</td>
+</tr>
+</table>
+</body>
+</html>
+=====================
+HTML LISTS:-
+==========
+<!DOCTYPE html>
+<html>
+<body>
+
+<ul>
+  <li>Coffee</li>
+</ul>
+
+</body>
+</html>
+ANS:COFFEE
+--------
+2.ORDERED LIST
+<!DOCTYPE html>
+<html>
+<body>
+
+<ol>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol>
+
+</body>
+</html>
+
+3.Complete the description list below
+<!DOCTYPE html>
+<html>
+<body>
+
+<dl>
+  <dt>Coffee</dt>
+  <dt>Milk</dt>
+</dl>
+
+</body>
+</html>
+ANS:coffee
+    milk
+===========
+HTML SCRIPTS:-
+============
+1.Use JavaScript to change the HTML content of the <p> element to "Hello World!".?
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo">Hi.</p>
+
+<script>
+document.getElementById("demo").innerHTML = "Hello World!";
+</script> 
+
+</body>
+</html>
+--------
+2.
+<p id="demo">Hello World!</p>
+
+<script>
+document.getElementById("demo").style.fontSize = "40px";
+</script> 
+----------------
+3.
+<p id="demo">Hello World!</p>
+
+<script>
+document.getElementById("demo").style.backgroundColor = "red";
+</script> 
+------------------
+4.
+<img id="image" src="smiley.gif" width="304" height="228">
+
+<script>
+document.getElementById("image").src = "pic_mountain.jpg";
+</script>
+=========
+HTML FORMS:-
+==========
+<!DOCTYPE html>
+<html>
+<body>
+
+<form>
+<input type="button" value="OK">
+</form>
+
+</body>
+</html>
+------------
+2.
+<!DOCTYPE html>
+<html>
+<body>
+
+<form>
+<input type="radio" name="gender" value="male"> Male
+<input type="radio" name="gender" value="female"> Female
+</form>
+
+</body>
+</html>
+----------------
+3.
+<!DOCTYPE html>
+<html>
+<body>
+
+<form action="/action_page.php">
+Name: <input type="text" name="name">
+<input type="submit">
+</form>
+
+</body>
+</html>
+ANS:name:------submit
+-------------
+html form elements:-
+====================
+<!DOCTYPE html>
+<html>
+<body>
+
+<form action="/action_page.php">
+  <select name="cars">
+    <option value="volvo">Volvo</option>
+    <option value="ford">Ford</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select>
+  <input type="submit">
+</form>
+
+</body>
+</html>
+-------------
+<!DOCTYPE html>
+<html>
+<body>
+
+<button type="button" onclick="alert('Hello World!')">
+Click Me!</button>
+
+</body>
+</html>
+o/p:-click me
+=========
+HTML INPUT TYPES:-
+==============
+<!DOCTYPE html>
+<html>
+<body>
+
+<input type="button" onclick="alert('Hello World')" value="Click Me">
+
+</body>
+</html>
+

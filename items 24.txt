@@ -1,0 +1,53 @@
+https://timesofindia.indiatimes.com/entertainment/hindi/movie-reviews
+
+https://timesofindia.indiatimes.com/entertainment/english/movie-reviews/the-incredibles-2/movie-review/64655772.cms
+
+
+title =  ''.join(response.xpath('//div[@class="md_breadcrum clearfix"]//text()').extract()).strip()
+name = ''.join(response.xpath('//meta[@name="twitter:title"]//@content').extract()).strip()
+image = ''.join(response.xpath('//meta[@property="og:image"]//@content').extract()).strip()
+description = ''.join(response.xpath('//div[@class="Normal"]//text()').extract()).strip()
+name_itemtype = ''.join(response.xpath('//span[@class="md_byline"]//text()').extract()).strip()
+name_links = ''.join(response.xpath('//meta[@ name="keywords"]//@content').extract()).strip()
+
+-------
+https://www.nytimes.com/2018/06/23/us/politics/trump-nevada-republican-convention.html
+
+urls = response.xpath('//div[@class="collection"]//h2[@class="story-heading"]/a/@href').extract()
+
+title = ''.join(response.xpath('//h1[@class="css-1oanpl3 ejekc6u0"]//text()').extract()).strip()
+name = ''.join(response.xpath('//span[@class="css-1baulvz"]//text()').extract()).strip()
+image =  ''.join(response.xpath('//div[@class="ResponsiveMedia-container--G2JS6"]//img//@src').extract()).strip()
+description = ''.join(response.xpath('//div[@class="css-18sbwfn StoryBodyCompanionColumn"]//text()').extract()).strip()
+name_itemtype = ''.join(response.xpath('//span[@class="ResponsiveMedia-captionText--2WFdF css-fyuj2v emkp2hg0"]//text()').extract()).strip()
+name_links = ''.join(response.xpath('//p[@class="css-1cbhw1y e1x1pwtg1"]//a//@href').extract()).strip()
+
+        tutorial     = NeworkItem()
+        tutorial['title'] = title
+        tutorial['name'] =  name
+        tutorial['image']   =   image
+        tutorial['description'] = description
+        tutorial['name_itemtype'] = name_itemtype
+        tutorial['link'] = name_links
+        tutorial['reference_url'] = response.url
+        yield tutorial
+        #data = (title, name, description, name_links, image, name_itemtype, response.url)
+        #self.cursor.execute(self.insert_query, data)
+        #self.conn.commit()
+ -----------------------------------
+
+CREATE TABLE `rolling_movie` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `title` text COLLATE utf8_unicode_ci NOT NULL,
+  `name` text COLLATE utf8_unicode_ci NOT NULL,
+  `Description` text COLLATE utf8_unicode_ci NOT NULL,
+  `name_itemtype` text COLLATE utf8_unicode_ci NOT NULL,
+  `link` text COLLATE utf8_unicode_ci NOT NULL,
+  `Image` text COLLATE utf8_unicode_ci NOT NULL,
+  `reference_url` text COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` datetime NOT NULL,
+  `modified_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE
+CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `id` (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=368 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci

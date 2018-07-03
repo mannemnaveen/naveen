@@ -1,0 +1,31 @@
+CREATE TABLE `governor` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `title` text COLLATE utf8_unicode_ci NOT NULL,
+  `name` text COLLATE utf8_unicode_ci NOT NULL,
+  `Description` text COLLATE utf8_unicode_ci NOT NULL,
+  `figcaption` text COLLATE utf8_unicode_ci NOT NULL,
+  `link` text COLLATE utf8_unicode_ci NOT NULL,
+  `Image` text COLLATE utf8_unicode_ci NOT NULL,
+  `reference_url` text COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` datetime NOT NULL,
+  `modified_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE
+CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `id` (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=368 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
+
+---------------------------------
+''.join(response.xpath('//div[@class="byline"]//text()').extract())
+-----------------------
+https://www.imdb.com/india/top-rated-indian-movies/?pf_rd_m=A2FGELUUNOQJNL&pf_rd_p=f0294795-5981-40c8-b642-15ce8ebdecf6&pf_rd_r=MNDJEPTFYYEBGHE58SHS&pf_rd_s=center-1&pf_rd_t=60601&pf_rd_i=india.toprated&ref_=fea_india_ss_toprated_india_tr_in_hd
+
+
+time = ''.join(response.xpath('//time[@itemprop="duration"]//text()').extract())
+title_bar = ''.join(response.xpath('//div[@class="titleBar"]//text()').extract()).strip()
+
+rating = ''.join(response.xpath('//div[@class="ratingValue"]//text()').extract()).strip()
+drama = ''.join(response.xpath('//span[@class="itemprop"]//text()').extract()).strip()
+date = ''.join(response.xpath('//a[@title="See more release dates"]//text()').extract()).strip()
+description = ''.join(response.xpath('//div[@class="summary_text"]//text()').extract()).strip()
+image = ''.join(response.xpath('//div[@class="poster"]//a//@href').extract()).strip()
+writers = ''.join(response.xpath('//span[@itemprop="creator"]//text()').extract()).strip()

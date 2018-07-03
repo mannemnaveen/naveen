@@ -1,0 +1,1 @@
+inheritnce-create class-inherits(attributes and existing class)->newly created class is a derived class and the existing class is the base/parent class.

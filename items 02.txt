@@ -1,0 +1,16 @@
+https://www.rollingstone.com/movies/movie-news/
+---------------------------------------
+
+
+
+response.xpath('//div[@class="l-blog__item l-blog__item--spacer-s"]//ul[@class="l-river"]//a//@href').extract()
+---------------------
+https://www.rollingstone.com/movies/movie-news/10-best-movies-to-see-in-july-ant-man-2-sorry-to-bother-you-and-more-666823/
+----------
+title = ''.join(response.xpath('//h1[@class="l-article-header__row l-article-header__row--title t-bold t-bold--condensed"]//text()').extract()).strip()
+name = ''.join(response.xpath('//div[@class="c-byline__author"]//text()').extract()).strip()
+image = ''.join(response.xpath('//div[@class="c-picture__frame"]//img//@data-src').extract()).strip()
+description =  ''.join(response.xpath('//div[@class="c-content t-copy"]//text()').extract()).strip()
+name_itemtype = ''.join(response.xpath('//div[@class="c-picture__caption"]//p//text()').extract()).strip()
+name_links = ''.join(response.xpath('//span[@class="screen-reader-text"]//text()').extract()).strip()
+

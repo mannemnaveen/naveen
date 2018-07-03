@@ -1,0 +1,131 @@
+https://www.moneycontrol.com/news/business/
+
+urls = response.xpath('//ul[@id="cagetory"]//li[@class="clearfix"]//a//@href').extract()
+
+https://www.moneycontrol.com/news/business/companies-need-to-win-trust-of-society-huls-harish-manwani-2653411.html
+
+title = ''.join(response.xpath('//h1[@class="artTitle"]//text()').extract()).strip()
+name = ''.join(response.xpath('//div[@class="dis-in-blk bloger-name"]//text()').extract()).strip()
+image = ''.join(response.xpath('//div[@class="slideshow-article-img"]//img//@src').extract()).strip()
+description = ''.join(response.xpath('//div[@id="article-main"]//p//text()').extract()).strip()
+name_itemtype = ''.join(response.xpath('//h2[@class="subhead"]//text()').extract()).strip()
+name_links = ''.join(response.xpath('//div[@class="dis-in-blk bloger-name"]//a//@href').extract()).strip()
+
+# -*- coding: utf-8 -*-
+
+# Define here the models for your scraped items
+#
+# See documentation in:
+# https://doc.scrapy.org/en/latest/topics/items.html
+
+import scrapy
+
+
+class FundrazrItem(scrapy.Item):
+    # define the fields for your item here like:
+    # name = scrapy.Field()
+    campaignTitle = scrapy.Field()
+    amountRaised = scrapy.Field()
+    goal = scrapy.Field()
+    currencyType = scrapy.Field()
+    endDate = scrapy.Field()
+    numberContributors = scrapy.Field()
+    story = scrapy.Field()
+    url = scrapy.Field()
+    pass
+
+
+    title         = scrapy.field()
+    name          = scrapy.field()
+    description   =   scrapy.field()
+    name_itemtype = scrapy.field()
+    link          = scrapy.field()
+    image         =   scrapy.field()
+    reference_url = response.url
+
+-------------------------------------------
+# -*- coding: utf-8 -*-
+# See documentation in:
+# https://doc.scrapy.org/en/latest/topics/items.html
+
+import scrapy
+
+
+class TutorialItem(scrapy.Item):
+    # define the fields for your item here like:
+    # name = scrapy.Field()
+    pass
+
+class IssueItem(scrapy.Item):
+    title         =  scrapy.Field()
+    name          =  scrapy.Field()
+    description   =  scrapy.Field()
+    name_itemtype =  scrapy.Field()
+    link          =  scrapy.Field()
+    image         =  scrapy.Field()
+    reference_url =  response.url
+    yield tutorial
+
+class NeworkItem(scrapy.Item):
+    title         =  scrapy.Field()
+    name          =  scrapy.Field()
+    description   =  scrapy.Field()
+    name_itemtype =  scrapy.Field()
+    link          =  scrapy.Field()
+    image         =  scrapy.Field()
+    reference_url =  response.url
+    
+class CartoonItem(scrapy.Item):                        
+    title         =  scrapy.Field()                      
+    name          =  scrapy.Field()                      
+    description   =  scrapy.Field()                       
+    name_itemtype =  scrapy.Field()                       
+    link          =  scrapy.Field()                       
+    image         =  scrapy.Field()                       
+    reference_url =  response.url
+
+class IndianItem(scrapy.Item):                        
+    title         =  scrapy.Field()                      
+    name          =  scrapy.Field()                      
+    description   =  scrapy.Field()                       
+    name_itemtype =  scrapy.Field()                       
+    link          =  scrapy.Field()                       
+    image         =  scrapy.Field()                       
+    reference_url =  response.url
+
+class CartoonItem(scrapy.Item):                        
+    title         =  scrapy.Field()                      
+    name          =  scrapy.Field()                      
+    description   =  scrapy.Field()                       
+    name_itemtype =  scrapy.Field()                       
+    link          =  scrapy.Field()                       
+    image         =  scrapy.Field()                       
+    reference_url =  response.url
+
+class CartoonItem(scrapy.Item):                        
+    title         =  scrapy.Field()                      
+    name          =  scrapy.Field()                      
+    description   =  scrapy.Field()                       
+    name_itemtype =  scrapy.Field()                       
+    link          =  scrapy.Field()                       
+    image         =  scrapy.Field()                       
+    reference_url =  response.url
+
+class CartoonItem(scrapy.Item):                        
+    title         =  scrapy.Field()                      
+    name          =  scrapy.Field()                      
+    description   =  scrapy.Field()                       
+    name_itemtype =  scrapy.Field()                       
+    link          =  scrapy.Field()                       
+    image         =  scrapy.Field()                       
+    reference_url =  response.url
+
+class CartoonItem(scrapy.Item):                        
+    title         =  scrapy.Field()                      
+    name          =  scrapy.Field()                      
+    description   =  scrapy.Field()                       
+    name_itemtype =  scrapy.Field()                       
+    link          =  scrapy.Field()                       
+    image         =  scrapy.Field()                       
+    reference_url =  response.url
+---------------------------------------

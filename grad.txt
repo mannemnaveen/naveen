@@ -1,0 +1,65 @@
+https://www.forbes.com/sites/gradsoflife/2018/05/24/rewiring-employment-in-a-new-age/#43fa0fd85b2a
+
+title:- ''.join(response.xpath('//h1[@class="fs-headline speakable-headline"]//text()').extract())
+
+name_link
+''.join(response.xpath('//span[@class="fs-author-name contrib-byline-author speakable-author"]//a//@href').extract())
+
+page_name
+''.join(response.xpath('//span[@class="fs-author-name contrib-byline-author speakable-author"]//text()').extract())
+
+name:
+ ''.join(response.xpath('//span[@class="user fs-text-s"]//text()').extract())
+
+description:
+ ''.join(response.xpath('//div[@_ngcontent-c20]//text()').extract())
+''.join(response.xpath('//meta[@property="og:image"]//@content').extract())
+
+
+nytimes_browse
+
+from scrapy.selector import Selector
+from scrapy.spider import Spider
+from http.request import Requuest
+import MySQLdb
+
+class GradLifeSpider(Spider):
+    name = "grad_life"
+    start_urls = ['https://www.forbes.com/sites/gradsoflife/2018/05/24/rewiring-employment-in-a-new-age/#43fa0fd85b2a']
+
+      
+
+    def parse(self,response):
+        page = response.url.split("/")[-2]
+        filename = 'quotes-%s.html' % page
+
+
+
+
+database
+
+
+CREATE TABLE `grad_life` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `title` text COLLATE utf8_unicode_ci NOT NULL,
+  `name` text COLLATE utf8_unicode_ci NOT NULL,
+  `Description` text COLLATE utf8_unicode_ci NOT NULL,
+  `link` text COLLATE utf8_unicode_ci NOT NULL,
+  `Image` text COLLATE utf8_unicode_ci NOT NULL,
+  `reference_url` text COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` datetime NOT NULL,
+  `modified_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE
+CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `id` (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=368 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
+
+
+
+-------------------
+title = ''.join(response.xpath('//h1[@class="title"]//text()').extract())           
+name = ''.join(response.xpath('//span[@class="author-img-name 1"]//text()').extract())
+name_links = ''.join(response.xpath('//span[@class="author-img-name 1"]//a//@href').extract())
+image = ''.join(response.xpath('//meta[@property="og:image"]//@content').extract())
+description = ''.join(response.xpath('//div[@id="content-body-14269002-24121221"]//text()').extract())
+image =  ''.join(response.xpath('//div[@class="img-container img-full-w-cont"]//img//@data-proxy-image').extract())

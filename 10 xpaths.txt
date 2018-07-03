@@ -1,0 +1,60 @@
+1.scrapy shell 'http://www.thehindu.com/sport/cricket/indian-premier-league-2018-sunrisers-hyderabad-vs-kolkata-knight-riders/article23926261.ece'
+-> response.xpath('//div[@id="content-body-14269002-23926261"]//p//text()').extract()
+->response.xpath('//title/text()').extract()
+-> ''.join(response.xpath('//div[@id="content-body-14269002-23926261"]//p//text()').extract()).strip()
+->response.xpath('//div[@class="lead-img-cont"]/text()').extract()
+-> ''.join(response.xpath('//title/text()').extract()).strip()
+->response.xpath('//div[@class="img-container picture"]//img//@src').extract()
+->''.join(response.xpath('//div[@class="img-container picture"]//img//@src').extract()).strip()
+
+2.scrapy shell 'https://www.firstpost.com/?gclid=Cj0KCQjwre_XBRDVARIsAPf7zZjqjkS68LyHp3vG2UypJstlZ2F07Acqivotc53J_hI6gfV3t0JVY90aAr2aEALw_wcB'
+-> response.xpath('//div[@class="news-item"]/text()').extract()
+-> response.xpath('//title/text()').extract()
+-> ''.join(response.xpath('//div[@class="featured-news"]//a//@href').extract())
+-> response.xpath('//div[@class="live-update clearfix"]/text()').extract()
+-> response.xpath('//div[@class="col-lg-6 col-md-4 col-sm-12 col-xs-12 text-center"]/text()').extract()
+->response.xpath('//div[@class="live-update clearfix"]//p//text()').extract()
+->''.join(response.xpath('//div[@class="live-update clearfix"]//p//text()').extract()).strip()
+
+3.scrapy shell 'http://www.thehindu.com/opinion/op-ed/how-the-congress-stumbled/article23906278.ece'
+
+->response.xpath('//title/text()').extract()
+->''.join(response.xpath('//title/text()').extract()).strip()
+->''.join(response.xpath('//div[@id="content-body-14269002-23906278"]/p//text()').extract()).strip()
+->response.xpath('//div[@class="img-container picture"]//img//@src').extract()
+
+4.scrapy shell 'https://www.nytimes.com/issue/todayspaper/2018/05/17/todays-new-york-times'
+
+-> response.xpath('//title/text()').extract()
+-> ''.join(response.xpath('//title/text()').extract()).strip()
+->response.xpath('//div[@class="story-body"]/text()').extract()
+-> ''.join(response.xpath('//div[@class="story-body"]/text()').extract()).strip()
+->response.xpath('//h2[@class="headline"]/text()').extract()
+->''.join(response.xpath('//h2[@class="headline"]/text()').extract()).strip()
+->response.xpath('//h2[@class="headline"]/a//@href').extract()
+->''.join(response.xpath('//h2[@class="headline"]/a//@href').extract()).strip()
+->response.xpath('//span[@class="visually-hidden"]/text()').extract()
+->''.join(response.xpath('//span[@class="visually-hidden"]/text()').extract()).strip()
+-> response.xpath('//figure[@class="media photo"]/text()').extract()
+
+5.scrapy shell ''
+feth('https://www.moneycontrol.com/news/india/karnataka-election-live-hearing-over-bopaiahs-appointment-begins-in-supreme-court-2568569.html')
+-> ''.join(response.xpath('//title/text()').extract()).strip()
+
+
+6.scrapy shell 'http://www.bbc.com/news/blogs-the-papers-44177921'
+
+->''.join(response.xpath('//span[@class="image-and-copyright-container"]/text()').extract()).strip()
+->response.xpath('//div[@class="story-body__inner"]')   
+->response.xpath('//title/text()').extract()
+->response.xpath('//figure[@class="media-portrait has-caption full-width lead"]/text()').extract()
+->response.xpath('//figcaption[@class="media-caption"]/text()').extract()
+-> ''.join(response.xpath('//p').extract()).strip()
+->response.xpath('//a[@href]/text()').extract()
+
+7.scrapy shell 'https://www.moneycontrol.com/news/india/karnataka-election-live-two-missing-congress-mlas-not-present-in-the-assembly-2568569.html'
+
+->response.xpath('//title/text()').extract()
+->response.xpath('//div[@class="img-story"]/text()').extract()
+->''.join(response.xpath('//a//@href').extract()).strip()
+->''.join(response.xpath('//p').extract()).strip()

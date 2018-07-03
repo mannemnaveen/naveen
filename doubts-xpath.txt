@@ -1,0 +1,14 @@
+1.xpaths:-
+->how to do xpath inspect
+->how to write in shell(response.xpath("//title/text")....like these xpaths)
+->how to inspect page and then write commands in the shell.
+->we are writing the scarpy xpaths in shell ,those xpaths used according to it writing in the spiders?
+->response.xpath(-----------)what the particular text are given to write the in the braces explanation i need?
+->how to crawl the single page and multiple pages?
+->how the tags are used in spiders
+
+2.spiders:-
+->how to start webscraping using scrapy
+->how to create spiders to wite the program 
+
+div->insepect in the page
